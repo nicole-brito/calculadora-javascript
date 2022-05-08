@@ -6,7 +6,7 @@ body{
     justify-content:center;
     overflow-x: hidden;
     flex-direction: column;
-    background: linear-gradient(0deg,#ffbe0b 0%, #fb5607 30%, #ff006e 100%);
+    background: linear-gradient(0deg,#78e247 0%, #6eee87 100%);
 }
 
 .calc {
