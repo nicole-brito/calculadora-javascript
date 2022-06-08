@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Calculadora</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -9,158 +11,45 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap" rel="stylesheet">
-    
-    <table class="calc">
+
+
+    <table class="calculadora">
+
         <tr>
-            <td colspan="3" class="outputttxt">
-                <input class= "display-box"" type="text" id="result" disabled>
-            </td>
-            <!--Clear screen-->
-            <td>
-                <input 
-                class="button" 
-                type="button" 
-                value="C" 
-                onclick="clearScreen()" 
-                style="background-color: #8338EC">
-            </td>
+            <td colspan="3"><p  id="resultado"></p></td> 
+            <td><button class="botao" onclick="clean()">C</button></td>
         </tr>
+
         <tr>
-            <td>
-                <button 
-                class="button"
-                onclick='writeNumber(this)' 
-                id='n1'>1
-                </button>
-            </td>
-            <td>
-                <input 
-                class="button" 
-                type="button" 
-                value="2" 
-                onclick="display('2')"
-                />
-            </td>
-            <td>
-                <input 
-                class="button" 
-                type="button" 
-                value="3" 
-                onclick="display('3')"
-                />
-            </td>
-            <td>
-                <input 
-                class="button" 
-                type="button" 
-                value="/" 
-                onclick="display('/')"
-                />
-            </td>
+            <td><button class="botao" onclick="insert('1')">1</button></td>
+            <td><button class="botao" onclick="insert('2')">2</button></td>
+            <td><button class="botao" onclick="insert('3')">3</button></td>
+            <td><button class="botao" onclick="insert('/')">&divide;</button></td>
         </tr>
+
+
         <tr>
-            <td>
-                <input 
-                class="button" 
-                type="button" 
-                value="4" 
-                onclick="display('4')"
-                />
-            </td>
-            <td>
-                <input 
-                class="button" 
-                type="button" 
-                value="5" 
-                onclick="display('5')"
-                />
-            </td>
-            <td>
-                <input 
-                class="button" 
-                type="button" 
-                value="6" 
-                onclick="display('6')"
-                />
-            </td>
-            <td>
-                <input 
-                class="button" 
-                type="button" 
-                value="-" 
-                onclick="display('-')"
-                />
-            </td>
+            <td><button class="botao" onclick="insert('4')">4</button></td>
+            <td><button class="botao" onclick="insert('5')">5</button></td>
+            <td><button class="botao" onclick="insert('6')">6</button></td>
+            <td><button class="botao" onclick="insert('*')">&times;</button></td>
         </tr>
+
         <tr>
-            <td>
-                <input 
-                class="button" 
-                type="button" 
-                value="7" 
-                onclick="display('7')"
-                />
-            </td>
-            <td>
-                <input 
-                class="button" 
-                type="button" 
-                value="8" 
-                onclick="display('8')"
-                />
-            </td>
-            <td>
-                <input 
-                class="button" 
-                type="button" 
-                value="9" 
-                onclick="display('9')"
-                />
-            </td>
-            <td>
-                <input 
-                class="button" 
-                type="button" 
-                value="+" 
-                onclick="display('+')"
-                />
-            </td>
+            <td><button class="botao" onclick="insert('7')">7</button></td>
+            <td><button class="botao" onclick="insert('8')">8</button></td>
+            <td><button class="botao" onclick="insert('9')">9</button></td>
+            <td><button class="botao" onclick="insert('-')">&minus;</button></td>
         </tr>
-            <td>
-                <input 
-                class="button" 
-                type="button" 
-                value="." 
-                onclick="display('.')"
-                />
-            </td>
-            <td>
-                <input 
-                class="button" 
-                type="button" 
-                value="0" 
-                onclick="display('0')"
-                />
-            </td>
-            <td>
-                <input 
-                class="button" 
-                type="button" 
-                value="*" 
-                onclick="display('*')"
-                />
-            </td>
-            <td>
-                
-                <input 
-                class="button" 
-                type="button" 
-                value="=" 
-                onclick="calculate()"
-                />
-            </td>
+
+        <tr>
+            <td><button class="botao" onclick="insert('0')">0</button></td>
+            <td><button class="botao" onclick="insert('.')">.</button></td>
+            <td><button class="botao" onclick="insert('+')">&plus;</button></td>
+            <td><button class="botao" onclick="calcular()">=</button></td>
+            
         </tr>
     </table>
-    <script type="text/javascript" src="/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
